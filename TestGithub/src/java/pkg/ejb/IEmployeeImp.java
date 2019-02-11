@@ -6,15 +6,15 @@
 
 package pkg.ejb;
 
-import javax.ejb.Stateless;
+import java.util.List;
+import pkg.entity.TbEmployee;
 
 /**
  *
  * @author hp
  */
-@Stateless
-public class BookFacade {
-
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
+public interface IEmployeeImp {
+    List<TbEmployee> findAll();
+    boolean create(TbEmployee employee);
+    boolean delete(String id);
 }
